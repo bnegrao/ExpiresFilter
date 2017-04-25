@@ -15,11 +15,11 @@ My environment uses java jre 1.6 and Tomcat 6.0.24.
 
 If you use different versions, edit the pom.xml file and change maven compiler "target" version, or the versions in the "catalina" and "juli" artifacts.
 
-### Build the jar
+### Build the jar file
 
     mvn clean install
 
-The jar will be in the project's **target** folder.
+The jar file will be created in the project's **./target** folder.
 
 ### Put the jar in the tomcat's lib dir
 
