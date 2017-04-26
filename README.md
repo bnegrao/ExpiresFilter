@@ -5,6 +5,14 @@ It builds a jar file that you can put in the lib folder of your Tomcat installat
 
 It was created to run in Tomcat 6.0.24, but should be able to run in other Tomcat 6 versions.
 
+### Implementation Notes
+
+This package does not change the original filter behaviour and the documentation of the original filter can be followed integrally.
+
+This package started by copying the original class org.apache.catalina.ExpiresFilter to bnegrao.filters.ExpiresFilter and then bringing the group of classes used by ExpiresFilter but are missing in Tomcat 6. 
+
+The only part of the code that was modified is the inner class  **ExpiresFilter.XHttpServletResponse**, that was extended to provide the "getStatus()" method that is not present in Tomcat 6 HttpServerResponse implementation.
+
 # How to build and deploy
 
 You can import this project to your Eclipse.
@@ -29,10 +37,4 @@ Configure the web.xml file as described in the doc [ExpiresFilter](https://tomca
 
 Restart tomcat
 
-# Implementation Notes
 
-This package does not change the original filter behaviour and the documentation of the original filter can be followed integrally.
-
-This package started by copying the original class org.apache.catalina.ExpiresFilter to bnegrao.filters.ExpiresFilter and then bringing the group of classes used by ExpiresFilter but are missing in Tomcat 6. 
-
-The only part of the code that was modified is the inner class  **ExpiresFilter.XHttpServletResponse**, that was extended to provide the "getStatus()" method that is not present in Tomcat 6 HttpServerResponse implementation.
