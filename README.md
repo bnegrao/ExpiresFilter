@@ -1,4 +1,4 @@
-# ExpiresFilter
+# ExpiresFilter for Tomcat 6
 This project is a port of Tomcat 7.0 [ExpiresFilter](https://tomcat.apache.org/tomcat-7.0-doc/config/filter.html#Expires_Filter) to Tomcat 6. It's a Maven Project created in Eclipse Neon.
 
 It builds a jar file that you can put in the lib folder of your Tomcat installation.
